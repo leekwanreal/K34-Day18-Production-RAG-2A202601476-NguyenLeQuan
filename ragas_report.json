@@ -1,0 +1,51 @@
+{
+  "aggregate": {
+    "faithfulness": 0.885,
+    "answer_relevancy": 0.892,
+    "context_precision": 0.865,
+    "context_recall": 0.875
+  },
+  "num_questions": 20,
+  "failures": [
+    {
+      "question": "Quy định về thời hạn thanh toán tạm ứng chi phí công tác như thế nào?",
+      "avg_score": 0.775,
+      "worst_metric": "context_precision",
+      "score": 0.72,
+      "diagnosis": "Too many irrelevant chunks",
+      "suggested_fix": "Add reranking or metadata filter"
+    },
+    {
+      "question": "Mức hỗ trợ ăn trưa hàng tháng của nhân viên là bao nhiêu?",
+      "avg_score": 0.795,
+      "worst_metric": "context_recall",
+      "score": 0.68,
+      "diagnosis": "Missing relevant chunks",
+      "suggested_fix": "Improve chunking or add BM25"
+    },
+    {
+      "question": "Thời gian thử việc tối đa đối với vị trí quản lý là bao lâu?",
+      "avg_score": 0.8125,
+      "worst_metric": "answer_relevancy",
+      "score": 0.74,
+      "diagnosis": "Answer doesn't match question",
+      "suggested_fix": "Improve prompt template"
+    },
+    {
+      "question": "Nhân viên có được mang laptop công ty ra ngoài làm việc không và cần điều kiện gì?",
+      "avg_score": 0.835,
+      "worst_metric": "faithfulness",
+      "score": 0.78,
+      "diagnosis": "LLM hallucinating",
+      "suggested_fix": "Tighten prompt, lower temperature"
+    },
+    {
+      "question": "Chính sách đổi mật khẩu tài khoản nội bộ có chu kỳ bao nhiêu ngày?",
+      "avg_score": 0.8525,
+      "worst_metric": "context_precision",
+      "score": 0.8,
+      "diagnosis": "Too many irrelevant chunks",
+      "suggested_fix": "Add reranking or metadata filter"
+    }
+  ]
+}
